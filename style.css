@@ -1,1 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 
+#target {
+  padding-top: 10%;
+  font-size: 20em;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  height: 100%;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: 20%;
+  color: #333333;
+  background-color: #bbbbbb;
+}
+
+#target.correct {
+  background-color: #55de45;
+  color: darkgreen;
+}
+
+#target.incorrect {
+  background-color: #882222;
+  color: red;
+}
