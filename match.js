@@ -9,24 +9,29 @@ NewLetter = function (avoid) {
   $('#target').html(target + target.toLowerCase());
 }
 MarkCorrect = function() {
-  $('#target').addClass("correct");
-  setTimeout(function() {$('#target').removeClass("correct")}, 2000);
+  $('body').addClass("correct");
+  setTimeout(function() {$('body').removeClass("correct")}, 2000);
 }
+var clearIncorrect;
 MarkIncorrect = function() {
-  $('#target').addClass("incorrect");
-  setTimeout(function() {$('#target').removeClass("incorrect")}, 800);
+  $('body').addClass("incorrect");
+  window.clearTimeout(clearIncorrect);
+  clearIncorrect = setTimeout(function() {$('body').removeClass("incorrect")}, 300);
 }
 
 var target = ''
 NewLetter();
 
 $(document).keydown(function (e){
-  var pressed = String.fromCharCode(e.keyCode);
-  if (target == pressed) {
-    MarkCorrect();
-    setTimeout(function() {NewLetter(target);}, 2000);
-    target='';
-  } else {
-    if (target != '') MarkIncorrect();
+  code = e.keyCode
+  if (code > 64 && code < 123) {
+  var pressed = String.fromCharCode(code);
+    if (target == pressed) {
+      MarkCorrect();
+      setTimeout(function() {NewLetter(target);}, 2000);
+      target='';
+    } else {
+      if (target != '') MarkIncorrect();
+    }
   }
 })
