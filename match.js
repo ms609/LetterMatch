@@ -10,7 +10,12 @@ NewLetter = function (avoid) {
 }
 MarkCorrect = function() {
   $('body').addClass("correct");
-  setTimeout(function() {$('body').removeClass("correct")}, 2000);
+  $('body').fireworks();
+  $('body').fireworks('destroy');
+  setTimeout(function() {
+    $('body').removeClass("correct");
+  }, 2000);
+    
 }
 var clearIncorrect;
 MarkIncorrect = function() {
