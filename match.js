@@ -15,7 +15,6 @@ MarkCorrect = function() {
   setTimeout(function() {
     $('body').removeClass("correct");
   }, 2000);
-    
 }
 var clearIncorrect;
 MarkIncorrect = function() {
@@ -27,14 +26,14 @@ MarkIncorrect = function() {
 var target = ''
 NewLetter();
 
-$(document).keydown(function (e){
+$(document).keydown(function (e) {
   code = e.keyCode
   if (code > 64 && code < 123) {
   var pressed = String.fromCharCode(code);
     if (target == pressed) {
       MarkCorrect();
       setTimeout(function() {NewLetter(target);}, 2000);
-      target='';
+      target = '';
     } else {
       if (target != '') MarkIncorrect();
     }
