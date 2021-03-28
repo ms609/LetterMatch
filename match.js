@@ -18,18 +18,27 @@ MarkCorrect = function() {
   }, 2000);
 }
 var clearIncorrect;
+var badNoise;
+  
+UnmarkIncorrect = function() {
+  $('body').removeClass("incorrect");
+  clearIncorrect = false;
+}
+
 MarkIncorrect = function() {
-  $('body').addClass("incorrect");
-  var context = new AudioContext();
-  var badNoise = context.createOscillator();
-  badNoise.type = "sine";
-  badNoise.connect(context.destination);
-  badNoise.start();
-  window.clearTimeout(clearIncorrect);
-  clearIncorrect = setTimeout(function() {
-    $('body').removeClass("incorrect")
-    badNoise.stop();
-  }, 300);
+  if (clearIncorrect) {
+    window.clearTimeout(clearIncorrect);
+    clearIncorrect = setTimeout(UnmarkIncorrect, 300);
+  } else { 
+    $('body').addClass("incorrect");
+    var context = new AudioContext();
+    badNoise = context.createOscillator();
+    badNoise.type = "sine";
+    badNoise.connect(context.destination);
+    badNoise.start();
+    setTimeout(function () {badNoise.stop();}, 300);
+    clearIncorrect = setTimeout(UnmarkIncorrect, 300);
+  }
 }
 
 var target = ''
