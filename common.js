@@ -2,13 +2,6 @@ var clearIncorrect;
 var badNoise;
 var target = '';
 
-RandomLetter = function (not) {
-  var ret = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-  console.log(ret, not)
-  if (ret == not) ret = RandomLetter(not);
-  return (ret);
-}
-
 NewLetter = function (avoid) {
   target = RandomLetter(avoid);
   $('#target').html(target + target.toLowerCase());
@@ -44,11 +37,9 @@ MarkIncorrect = function() {
   }
 }
 
-NewLetter();
-
 $(document).keydown(function (e) {
   code = e.keyCode
-  if (code > 64 && code < 123) {
+  if (code > 47 && code < 123) {
   var pressed = String.fromCharCode(code);
     if (target == pressed) {
       MarkCorrect();
