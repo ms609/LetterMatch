@@ -1,5 +1,10 @@
+var clearIncorrect;
+var badNoise;
+var target = '';
+
 RandomLetter = function (not) {
-  var ret = String.fromCharCode(65+Math.floor(Math.random() * 26));
+  var ret = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+  console.log(ret, not)
   if (ret == not) ret = RandomLetter(not);
   return (ret);
 }
@@ -17,9 +22,7 @@ MarkCorrect = function() {
     $('body').removeClass("correct");
   }, 2000);
 }
-var clearIncorrect;
-var badNoise;
-  
+
 UnmarkIncorrect = function() {
   $('body').removeClass("incorrect");
   clearIncorrect = false;
@@ -41,7 +44,6 @@ MarkIncorrect = function() {
   }
 }
 
-var target = ''
 NewLetter();
 
 $(document).keydown(function (e) {
@@ -50,7 +52,8 @@ $(document).keydown(function (e) {
   var pressed = String.fromCharCode(code);
     if (target == pressed) {
       MarkCorrect();
-      setTimeout(function() {NewLetter(target);}, 2000);
+      oldLetter = target;
+      setTimeout(function() {NewLetter(oldLetter);}, 2000);
       target = '';
     } else {
       if (target != '') MarkIncorrect();
