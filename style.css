@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 body {
   padding-top: 10%;
   font-size: 20em;
-  font-family: Arial, sans-serif;
+  font-family: "Patrick hand", cursive, Arial, sans-serif;
   text-align: center;
   font-weight: bold;
   color: #333333;
