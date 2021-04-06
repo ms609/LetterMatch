@@ -19,3 +19,8 @@ body.incorrect {
   background-color: #882222;
   color: red;
 }
+
+.pressed {
+  font-family: "Courier New", monospace;
+  font-size: 15em;
+}
