@@ -4,8 +4,12 @@ var target = '';
 
 NewLetter = function (avoid) {
   target = RandomLetter(avoid);
+  ShowTarget();
+}
+ShowTarget = function () {
   $('#target').html(target + target.toLowerCase());
 }
+
 MarkCorrect = function() {
   new Audio('66136__aji__ding30603-spedup.wav').play();
   $('body').addClass("correct");
@@ -41,6 +45,7 @@ $(document).keydown(function (e) {
   code = e.keyCode
   if (code > 47 && code < 123) {
   var pressed = String.fromCharCode(code);
+  $('#target').html(pressed);
     if (target == pressed) {
       MarkCorrect();
       oldLetter = target;
@@ -51,3 +56,5 @@ $(document).keydown(function (e) {
     }
   }
 })
+
+$(document).keyup(ShowTarget)
