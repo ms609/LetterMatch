@@ -9,7 +9,8 @@ NewLetter = function (avoid) {
 ShowTarget = function () {
   if (target != '') {
     $('#target').html(target + target.toLowerCase());
-  }s
+  }
+  $('body').removeClass("pressed");
 }
 
 MarkCorrect = function() {
@@ -55,6 +56,7 @@ $(document).keydown(function (e) {
     } else {
       if (target != '') {
         MarkIncorrect();
+        $('body').addClass('pressed');
         $('#target').html(pressed);
       }
     }
@@ -62,3 +64,4 @@ $(document).keydown(function (e) {
 })
 
 $(document).keyup(ShowTarget)
+$(document).focusout(ShowTarget)
