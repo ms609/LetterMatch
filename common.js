@@ -7,7 +7,9 @@ NewLetter = function (avoid) {
   ShowTarget();
 }
 ShowTarget = function () {
-  $('#target').html(target + target.toLowerCase());
+  if (target != '') {
+    $('#target').html(target + target.toLowerCase());
+  }s
 }
 
 MarkCorrect = function() {
@@ -44,15 +46,17 @@ MarkIncorrect = function() {
 $(document).keydown(function (e) {
   code = e.keyCode
   if (code > 47 && code < 123) {
-  var pressed = String.fromCharCode(code);
-  $('#target').html(pressed);
+    var pressed = String.fromCharCode(code);
     if (target == pressed) {
       MarkCorrect();
       oldLetter = target;
       setTimeout(function() {NewLetter(oldLetter);}, 2000);
       target = '';
     } else {
-      if (target != '') MarkIncorrect();
+      if (target != '') {
+        MarkIncorrect();
+        $('#target').html(pressed);
+      }
     }
   }
 })
