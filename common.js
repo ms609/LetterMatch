@@ -10,7 +10,7 @@ ShowTarget = function () {
   if (target != '') {
     $('#target').html(target + target.toLowerCase());
   }
-  $('body').removeClass("pressed");
+  //$('body').removeClass("pressed");
 }
 
 MarkCorrect = function() {
@@ -56,8 +56,8 @@ $(document).keydown(function (e) {
     } else {
       if (target != '') {
         MarkIncorrect();
-        $('body').addClass('pressed');
-        $('#target').html(pressed);
+        //$('body').addClass('pressed');
+        //$('#target').html(pressed);
       }
     }
   }
