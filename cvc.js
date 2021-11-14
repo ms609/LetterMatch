@@ -10,7 +10,7 @@ var dictionary = {
   tag: '🏷️',
   ten: '🔟',
   leg: '🦵',
-  pin: '🧷',
+  pin: '📍',
   web: '🕸️',
   lip: '💋',
   mop: '🧹',
