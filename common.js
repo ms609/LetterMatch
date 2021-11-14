@@ -6,10 +6,10 @@ NewLetter = function (avoid) {
   target = RandomLetter(avoid);
   ShowTarget();
 }
+
 ShowTarget = function () {
   if (target != '') {
     // $('#target').html(target + target.toLowerCase());
-    
     $('#target').html(target.toLowerCase());
   }
   //$('body').removeClass("pressed");
@@ -42,40 +42,22 @@ UnmarkIncorrect = function() {
   clearIncorrect = false;
 }
 
+Beep = function() {
+  var context = new AudioContext();
+  badNoise = context.createOscillator();
+  badNoise.type = "sine";
+  badNoise.connect(context.destination);
+  badNoise.start();
+  setTimeout(function () {badNoise.stop();}, 300);
+}
+
 MarkIncorrect = function() {
   if (clearIncorrect) {
     window.clearTimeout(clearIncorrect);
     clearIncorrect = setTimeout(UnmarkIncorrect, 300);
-  } else { 
+  } else {
     $('body').addClass("incorrect");
-    var context = new AudioContext();
-    badNoise = context.createOscillator();
-    badNoise.type = "sine";
-    badNoise.connect(context.destination);
-    badNoise.start();
-    setTimeout(function () {badNoise.stop();}, 300);
     clearIncorrect = setTimeout(UnmarkIncorrect, 300);
+    Beep();
   }
 }
-
-$(document).keydown(function (e) {
-  code = e.keyCode
-  if (code > 47 && code < 123) {
-    var pressed = String.fromCharCode(code);
-    if (target == pressed) {
-      MarkCorrect();
-      oldLetter = target;
-      setTimeout(function() {NewLetter(oldLetter);}, 2000);
-      target = '';
-    } else {
-      if (target != '') {
-        MarkIncorrect();
-        //$('body').addClass('pressed');
-        //$('#target').html(pressed);
-      }
-    }
-  }
-})
-
-$(document).keyup(ShowTarget)
-$(document).focusout(ShowTarget)

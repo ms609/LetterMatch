@@ -1,0 +1,21 @@
+#image {
+  margin: -0.4em;
+}
+
+.letter {
+  color: #ccc;
+}
+
+@keyframes red-flash {
+  from{color: darkred;}
+  to{color: #ccc;}
+}
+
+.green {
+  color: darkgreen;
+}
+
+.red {
+  animation-duration: 1s;
+  animation-name: red-flash;
+}
