@@ -15,14 +15,26 @@ ShowTarget = function () {
   //$('body').removeClass("pressed");
 }
 
-MarkCorrect = function() {
+Ding = function () {
   new Audio('66136__aji__ding30603-spedup.wav').play();
+}
+
+Green = function () {
   $('body').addClass("correct");
-  $('body').fireworks();
-  $('body').fireworks('destroy');
   setTimeout(function() {
     $('body').removeClass("correct");
   }, 2000);
+}
+
+Fireworks = function () {
+  $('body').fireworks();
+  $('body').fireworks('destroy');
+}
+
+MarkCorrect = function() {
+  Ding();
+  Green();
+  Fireworks();
 }
 
 UnmarkIncorrect = function() {
