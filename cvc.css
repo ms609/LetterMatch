@@ -3,12 +3,12 @@
 }
 
 .letter {
-  color: #fffc;
+  color: #fff2;
 }
 
 @keyframes red-flash {
   from{color: darkred;}
-  to{color: #fffc;}
+  to{color: #fff2;}
 }
 
 .green {
