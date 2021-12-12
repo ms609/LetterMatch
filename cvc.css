@@ -6,6 +6,10 @@
   color: #fff2;
 }
 
+.letter-gone {
+  color: #fff0;
+}
+
 @keyframes red-flash {
   from{color: darkred;}
   to{color: #fff2;}
