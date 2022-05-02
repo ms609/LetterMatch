@@ -32,7 +32,6 @@ var dictionary = {
   wave: '👋',
   pinch: '🤏',
   point: '👉',
-  pray: '🙏',
   feet: '👣',
   ear: '👂',
   brain: '🧠',
@@ -91,7 +90,7 @@ var dictionary = {
   carrot: '🥕',
   bread: '🍞',
   cheese: '🧀',
-  meat: '🥩',
+  // meat: '🥩', // ambiguous
   egg: '🥚',
   pizza: '🍕',
   cake: '🎂',
