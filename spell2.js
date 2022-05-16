@@ -85,7 +85,7 @@ var dictionary = {
   melon: '🍉',
   grape: '🍇',
   orange: '🍊',
-  lime: '🍈',
+  // lime: '🍈', // Looks like a melon in some implementations
   kiwi: '🥝',
   carrot: '🥕',
   bread: '🍞',
