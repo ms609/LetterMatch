@@ -27,6 +27,81 @@ let sums = [
   [4, "+", 4],
   [4, "+", 5],
 ];
+
+let i0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let i1 = [0, 0, 0,
+         0, 0, 0,
+         0, 0, 0,
+         0, 0, 0,
+         0, 1, 0];
+let i2 = [0, 0, 0,
+          0, 0, 0,
+          0, 0, 0,
+          0, 2, 0,
+          0, 2, 0];
+let i3 = [0, 0, 0,
+          0, 0, 0,
+          0, 3, 0,
+          0, 3, 0,
+          0, 3, 0];
+let i4 = [0, 0, 0,
+          0, 0, 0,
+          0, 4, 0,
+          0, 4, 0,
+          0, 4, 0,
+          0, 4, 0];          
+let sq4 = [0, 0, 0,
+         0, 0, 0,
+         0, 0, 0,
+         4, 4, 0,
+         4, 4, 0];
+let i5 =
+        [0, 5, 0,
+         0, 5, 0,
+         0, 5, 0,
+         0, 5, 0,
+         0, 5, 0];
+let i6 =         
+        [0, 0, 0,
+         0, 0, 0,
+         6, 6, 0,
+         6, 6, 0,
+         6, 6, 0];
+let h7 = 
+        [0, 0, 0,
+         0, 7, 0,
+         5, 6, 0,
+         3, 4, 0,
+         1, 2, 0];
+let rect8 =
+        [0, 0, 0,
+         8, 8, 0,
+         8, 8, 0,
+         8, 8, 0,
+         8, 8, 0];
+let sq9 = [0, 0, 0,
+           0, 0, 0,
+           "9-top", "9-top", "9-top",
+           9, 9, 9,
+           "9-btm", "9-btm", "9-btm"];
+let rect10 = 
+        [10, 10, 0,
+         10, 10, 0,
+         10, 10, 0,
+         10, 10, 0,
+         10, 10, 0];
+let h11 = 
+        [10, 10, 0,
+         10, 10, 0,
+         10, 10, 0,
+         10, 10, 0,
+         10, 10, 1];
+let rect12 = [ 0,  0,  0,
+              10, 10, 10,
+              10,  2, 10,
+              10,  2, 10,
+              10, 10, 10];
+              
 var position = 0;
 var question;
 var beeping;
@@ -63,103 +138,43 @@ function PaintBlocks(div, shown) {
 function ShowBlocks(div, no) {
   switch (no) {
     case 1:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         0, 1, 0]);
+      PaintBlocks(div, i1);
       break;
     case 2:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         0, 2, 0,
-         0, 2, 0]);
+      PaintBlocks(div, i2);
       break;
     case 3:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         0, 3, 0,
-         0, 3, 0,
-         0, 3, 0]);
+      PaintBlocks(div, i3);
       break;
     case 4:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         4, 4, 0,
-         4, 4, 0]);
+      PaintBlocks(div, sq4);
       break;
     case 5:
-      PaintBlocks(div,
-        [0, 5, 0,
-         0, 5, 0,
-         0, 5, 0,
-         0, 5, 0,
-         0, 5, 0]);
+      PaintBlocks(div, i5);
       break;
     case 6:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         6, 6, 0,
-         6, 6, 0,
-         6, 6, 0]);
+      PaintBlocks(div, i6);
       break;
     case 7:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 7, 0,
-         5, 6, 0,
-         3, 4, 0,
-         1, 2, 0]);
+      PaintBlocks(div, h7);
       break;
     case 8:
-      PaintBlocks(div,
-        [0, 0, 0,
-         8, 8, 0,
-         8, 8, 0,
-         8, 8, 0,
-         8, 8, 0]);
+      PaintBlocks(div, rect8);
       break;
     case 9:
-      PaintBlocks(div,
-        [0, 0, 0,
-         0, 0, 0,
-         "9-top", "9-top", "9-top",
-         9, 9, 9,
-         "9-btm", "9-btm", "9-btm"]);
+      PaintBlocks(div, sq9);
       break;
     case 10:
-      PaintBlocks(div,
-        [10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0]);
+      PaintBlocks(div, rect10);
       break;
     case 11:
-      PaintBlocks(div,
-        [10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 1]);
+      PaintBlocks(div, rect11);
       break;
     case 12:
-      PaintBlocks(div,
-        [0, 0, 0,
-         10, 10, 10,
-         10,  2, 10,
-         10,  2, 10,
-         10, 10, 10]);
+      PaintBlocks(div, rect12);
       break;
   default: 
-    PaintBlocks(div, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    PaintBlocks(div, i0);
   }
 }
 
