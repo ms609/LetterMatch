@@ -44,14 +44,20 @@ function PaintBlocks(div, shown) {
 }
 
 function ShowQuestion() {
-  let sum = sums[question];
-  let reverse = sum[1] == "+" && Math.random() < 0.5;
-  let num1 = reverse ? sum [2] : sum[0];
-  let num2 = reverse ? sum [0] : sum[2];
+  const sum = sums[question];
+  const reverse = sum[1] == "+" && Math.random() < 0.5;
+  const num1 = reverse ? sum [2] : sum[0];
+  const num2 = reverse ? sum [0] : sum[2];
+  let operator;
+  switch(sum[1]) {
+    case "-": operator = "&minus;"; break;
+    default:
+      sum[1];
+  }
     
   $("#left-num").html(Count(num1));
   PaintBlocks($("#left-block"), num1);
-  $("#operator").html(sum[1]);
+  $("#operator").html(operator);
   $("#right-num").html(Count(num2));
   PaintBlocks($("#right-block"), num2);
   $("#ans-num").html("?");
