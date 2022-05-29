@@ -19,11 +19,11 @@ Ding = function () {
   new Audio('66136__aji__ding30603-spedup.wav').play();
 }
 
-Green = function () {
+function Green(duration = 2000) {
   $('body').addClass("correct");
   setTimeout(function() {
     $('body').removeClass("correct");
-  }, 2000);
+  }, duration);
 }
 
 Fireworks = function () {

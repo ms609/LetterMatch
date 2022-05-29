@@ -1,107 +1,78 @@
+// Ensure that number-blocks.js is imported before this script
+
 "use strict";
+
 let sums = [
-  [1, "+", 1],
-  [1, "+", 2],
-  [1, "+", 3],
-  [1, "+", 4],
-  [1, "+", 5],
-  [1, "+", 6],
-  [1, "+", 7],
-  [1, "+", 8],
+
+  [i1, "+", i1, i2],
+  [i1, "+", i1, i2],
   
+  // Three
+  [i1, "+", i2, i3],
+  [i1, "+", i2, h3],
+  [i1, "+", i2_1, i3],
+  [i1_2, "+", i2, i3],
   
-  [1, "+", 1],
-  [2, "+", 1],
-  [3, "+", 1],
-  [4, "+", 1],
-  [5, "+", 1],
-  [6, "+", 1],
-  [7, "+", 1],
-  [8, "+", 1],
+  // Four
+  [i1, "+", l3, sq4],
+  [i1_3, "+", i3, i4],
+  [i1, "+", i3_1, i4],
+  [i1_1, "+", l3, sq4],
+  [i1_1, "+", h3, sq4],
+  [i2, "+", i2, sq4],
+  [_2, "+", _2, sq4],
+    
+  // Five
+  [i1, "+", i4, i5],
+  [i1_2, "+", sq4, h5],
+  [i2, "+", i3, h5],
+  [i2, "+", i3, i5],
+  [i2_3, "+", i3, i5],
+  [i1, "+", i4_1, i5],
   
-  [2, "+", 2],
-  [2, "+", 3],
-  [3, "+", 2],
-  [3, "+", 4],
-  [3, "+", 3],
-  [4, "+", 4],
-  [4, "+", 5],
+  // Six
+  [i1_2, "+", h5, rect6],
+  [i1, "+", i5, rect6],
+  [i1, "+", h5, rect6],
+  [i3, "+", i3, rect6],
+  [i2, "+", sq4, wide6],
+  [_2_2, "+", sq4, rect6],
+  
+  // Seven
+  [i1_3, "+", rect6, h7],
+  [i1, "+", wide6, dog7],
+  [i1, "+", rect6, h7],
+  [i1, "+", rect6, h7],
+  [_2, "+", h5, h7],
+  [i2, "+", i5, d7],
+  [i3, "+", i4, h7],
+  
+  // Eight
+  [i1, "+", h7, rect8],
+  [i1, "+", o7, o8],
+  [i1_3, "+", h7, rect8],
+  [i2, "+", rect6, rect8],
+  [_2, "+", rect6, rect8],
+  [i3, "+", i5, rect8],
+  [i3, "+", i5, b8],
+  [r3, "+", h5, rect8],
+  [i4, "+", i4, rect8],
+  [sq4, "+", sq4, rect8],
+  [sq4_2, "+", sq4, rect8],
+  
+  // Nine
+  [i1, "+", rect8, h9],
+  [i1, "+", o8, sq9],
+  [_2, "+", h7, h9],
+  [_2, "+", dog7, sq9],
+  [i2, "+", b7, h9],
+  [i3, "+", rect6, sq9],
+  [i4, "+", i5, h9],
+  [sq4, "+", h5, h9],
+  [sq4, "+", r5, sq9],
+
 ];
 
-let i0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-let i1 = [0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         0, 1, 0];
-let i2 = [0, 0, 0,
-          0, 0, 0,
-          0, 0, 0,
-          0, 2, 0,
-          0, 2, 0];
-let i3 = [0, 0, 0,
-          0, 0, 0,
-          0, 3, 0,
-          0, 3, 0,
-          0, 3, 0];
-let i4 = [0, 0, 0,
-          0, 0, 0,
-          0, 4, 0,
-          0, 4, 0,
-          0, 4, 0,
-          0, 4, 0];          
-let sq4 = [0, 0, 0,
-         0, 0, 0,
-         0, 0, 0,
-         4, 4, 0,
-         4, 4, 0];
-let i5 =
-        [0, 5, 0,
-         0, 5, 0,
-         0, 5, 0,
-         0, 5, 0,
-         0, 5, 0];
-let i6 =         
-        [0, 0, 0,
-         0, 0, 0,
-         6, 6, 0,
-         6, 6, 0,
-         6, 6, 0];
-let h7 = 
-        [0, 0, 0,
-         0, 7, 0,
-         5, 6, 0,
-         3, 4, 0,
-         1, 2, 0];
-let rect8 =
-        [0, 0, 0,
-         8, 8, 0,
-         8, 8, 0,
-         8, 8, 0,
-         8, 8, 0];
-let sq9 = [0, 0, 0,
-           0, 0, 0,
-           "9-top", "9-top", "9-top",
-           9, 9, 9,
-           "9-btm", "9-btm", "9-btm"];
-let rect10 = 
-        [10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0];
-let h11 = 
-        [10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 0,
-         10, 10, 1];
-let rect12 = [ 0,  0,  0,
-              10, 10, 10,
-              10,  2, 10,
-              10,  2, 10,
-              10, 10, 10];
-              
 var position = 0;
 var question;
 var beeping;
@@ -116,6 +87,14 @@ $(".block-container").each(function (index) {
 });
 
 // Sums
+
+function Count(blocks) {
+  var ret = 0;
+  blocks.forEach(function (block) {
+    if (block) ++ret;
+  });
+  return ret;
+}
 
 function NextSum(not) {
   var ret = Math.floor(Math.random() * sums.length);
@@ -135,58 +114,19 @@ function PaintBlocks(div, shown) {
   });
 }
 
-function ShowBlocks(div, no) {
-  switch (no) {
-    case 1:
-      PaintBlocks(div, i1);
-      break;
-    case 2:
-      PaintBlocks(div, i2);
-      break;
-    case 3:
-      PaintBlocks(div, i3);
-      break;
-    case 4:
-      PaintBlocks(div, sq4);
-      break;
-    case 5:
-      PaintBlocks(div, i5);
-      break;
-    case 6:
-      PaintBlocks(div, i6);
-      break;
-    case 7:
-      PaintBlocks(div, h7);
-      break;
-    case 8:
-      PaintBlocks(div, rect8);
-      break;
-    case 9:
-      PaintBlocks(div, sq9);
-      break;
-    case 10:
-      PaintBlocks(div, rect10);
-      break;
-    case 11:
-      PaintBlocks(div, rect11);
-      break;
-    case 12:
-      PaintBlocks(div, rect12);
-      break;
-  default: 
-    PaintBlocks(div, i0);
-  }
-}
-
 function ShowQuestion() {
   let sum = sums[question];
-  $("#left-num").html(sum[0]);
-  ShowBlocks($("#left-block"), sum[0]);
+  let reverse = sum[1] == "+" && Math.random() < 0.5;
+  let num1 = reverse ? sum [2] : sum[0];
+  let num2 = reverse ? sum [0] : sum[2];
+    
+  $("#left-num").html(Count(num1));
+  PaintBlocks($("#left-block"), num1);
   $("#operator").html(sum[1]);
-  $("#right-num").html(sum[2]);
-  ShowBlocks($("#right-block"), sum[2]);
+  $("#right-num").html(Count(num2));
+  PaintBlocks($("#right-block"), num2);
   $("#ans-num").html("?");
-  ShowBlocks($("#ans-block"), 0);
+  PaintBlocks($("#ans-block"), i0);
 }
 
 function NewSum(avoid) {
@@ -199,28 +139,22 @@ NewSum();
 
 $(document).keydown(function (e) {
   let pressed = e.key;
+  let greenDuration = 4000
   if (isFinite(e.key)) {
     let sum = sums[question];
-    var ans;
-    switch(sum[1]) {
-      case "+":
-        ans = sum[0] + sum[2];
-        break;
-      default:
-        console.log("Undefined operator: ", sum[1]);
-    }
-    if (pressed == ans) {
+    let ans = sum[3];
+    if (pressed == Count(ans)) {
       if (!dinging) {
-        $("#ans-num").html(ans);
-        ShowBlocks($("#ans-block"), ans);
+        $("#ans-num").html(Count(ans));
+        PaintBlocks($("#ans-block"), ans);
         Ding();
         dinging = true;
-        Green();
+        Green(greenDuration);
         Fireworks();
         setTimeout(function() {
           dinging = false;
           NewSum(question);
-        }, 4000);
+        }, greenDuration);
       }
     } else {
       if (beeping) {
