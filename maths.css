@@ -50,8 +50,9 @@ div.block {
   outline-offset: -2px;
   visibility: hidden;
   background-image: linear-gradient(
-    rgba(187, 187, 187, 0.8),
-    rgba(187, 187, 187, 0.8));
+    210deg,
+    rgba(187, 187, 187, 0.6),
+    rgba(187, 187, 187, 0.25));
 }
 
 div.text {
