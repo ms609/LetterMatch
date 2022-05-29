@@ -1,15 +1,36 @@
 "use strict";
 let sums = [
   [1, "+", 1],
+  [1, "+", 2],
+  [1, "+", 3],
+  [1, "+", 4],
+  [1, "+", 5],
+  [1, "+", 6],
+  [1, "+", 7],
+  [1, "+", 8],
+  
+  
+  [1, "+", 1],
+  [2, "+", 1],
+  [3, "+", 1],
+  [4, "+", 1],
+  [5, "+", 1],
+  [6, "+", 1],
+  [7, "+", 1],
+  [8, "+", 1],
+  
   [2, "+", 2],
   [2, "+", 3],
+  [3, "+", 2],
   [3, "+", 4],
   [3, "+", 3],
+  [4, "+", 4],
   [4, "+", 5],
 ];
 var position = 0;
 var question;
 var beeping;
+var dinging = false;
 
 // Populate block containers
 
@@ -174,12 +195,18 @@ $(document).keydown(function (e) {
         console.log("Undefined operator: ", sum[1]);
     }
     if (pressed == ans) {
-      $("#ans-num").html(ans);
-      ShowBlocks($("#ans-block"), ans);
-      Ding();
-      Green();
-      Fireworks();
-      setTimeout(function() {NewSum(question);}, 2000);
+      if (!dinging) {
+        $("#ans-num").html(ans);
+        ShowBlocks($("#ans-block"), ans);
+        Ding();
+        dinging = true;
+        Green();
+        Fireworks();
+        setTimeout(function() {
+          dinging = false;
+          NewSum(question);
+        }, 4000);
+      }
     } else {
       if (beeping) {
         window.clearTimeout(beeping);
