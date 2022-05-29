@@ -1,0 +1,60 @@
+:root {
+  --col-0: #00000000;
+  --col-1: #e4131e;
+  --col-2: #eb7b0e;
+  --col-3: #dcc710;
+  --col-4: #40ca00;
+  --col-5: #2fbed9;
+  --col-6: #3f1db6;
+  --col-6-spot: #637cfc;
+  --col-7: #8951d7;
+  --col-8: #dd2bb2;
+  --col-9-top: #7b889d;
+  --col-9: #97a7c0;
+  --col-9-btm: #b6c8e3;
+  --col-10: #cfe1fa;
+  --col-10-bdr: #d4363d;
+}
+
+body {
+  font-size: 6em;
+}
+
+div {
+  display: inline-block;
+}
+
+div.num-col {
+  width: 20%;
+}
+
+div.op-col  {
+  width: 10%;
+}
+
+div.block-container {
+  display: block;
+  float: left;
+  aspect-ratio: 3/5;
+}
+
+div.block {
+  margin: 0.5%;
+  box-sizing: border-box;
+  width: 31%;
+  aspect-ratio: 1;
+  height: 19%;
+  display: block;
+  float: left;
+  outline: 2px solid;
+  outline-offset: -2px;
+  visibility: hidden;
+  background-image: linear-gradient(
+    rgba(187, 187, 187, 0.8),
+    rgba(187, 187, 187, 0.8));
+}
+
+div.text {
+  
+}
+

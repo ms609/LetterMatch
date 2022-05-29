@@ -42,7 +42,7 @@ UnmarkIncorrect = function() {
   clearIncorrect = false;
 }
 
-Beep = function() {
+function Beep() {
   var context = new AudioContext();
   badNoise = context.createOscillator();
   badNoise.type = "sine";
@@ -51,7 +51,7 @@ Beep = function() {
   setTimeout(function () {badNoise.stop();}, 300);
 }
 
-MarkIncorrect = function() {
+function MarkIncorrect() {
   if (clearIncorrect) {
     window.clearTimeout(clearIncorrect);
     clearIncorrect = setTimeout(UnmarkIncorrect, 300);
