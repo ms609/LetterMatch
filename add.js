@@ -52,7 +52,7 @@ function ShowQuestion() {
   switch(sum[1]) {
     case "-": operator = "&minus;"; break;
     default:
-      sum[1];
+      operator = sum[1];
   }
     
   $("#left-num").html(Count(num1));
