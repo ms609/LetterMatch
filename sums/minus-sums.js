@@ -73,7 +73,7 @@ var minus_sums = [
   // [sq4_2, "-", sq4, rect8],
   
   // Nine
-  [sq9, "-", rect8, i1_1],
+  [sq9, "-", o8, i1_1],
   [sq9, "-", sq4, r5],
   [h9, "-", h3, rect6],
   // [i1, "-", o8, sq9],
