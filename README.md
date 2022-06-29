@@ -12,6 +12,8 @@ Developed in line with our bairns' development:
   - [c-v-c, no clues](https://ms609.github.io/LetterMatch/spell)
   - [wider vocab](https://ms609.github.io/LetterMatch/spell2), including a few non-decodable words
 - Arithmetic:
-  Insipred by the excellent [NumberBlocks](https://www.bbc.co.uk/cbeebies/shows/numberblocks)
+  Inspired by the excellent [NumberBlocks](https://www.bbc.co.uk/cbeebies/shows/numberblocks)
   - Single-digit [Addition](https://ms609.github.io/LetterMatch/add)
   - [± Subtraction](https://ms609.github.io/LetterMatch/minus)
+- Pattern recognition:
+  - [Pattern palace](https://ms609.github.io/LetterMatch/pattern)

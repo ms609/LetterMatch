@@ -14,6 +14,9 @@
   --col-9-btm: #b6c8e3;
   --col-10: #cfe1fa;
   --col-10-bdr: #d4363d;
+
+  --col-x: #bbbbaa;
+  --col-x-bdr: #333333bb;
 }
 
 body {
@@ -38,9 +41,9 @@ div.block-container {
   aspect-ratio: 3/5;
 }
 
-div.block, div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
+div.block, div.block-x,
+div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
 div.block-5, div.block-6, div.block-7, div.block-8, div.block-9, div.block-10 {
-  margin: 0.5%;
   box-sizing: border-box;
   aspect-ratio: 1;
   display: block;
@@ -53,6 +56,11 @@ div.block-5, div.block-6, div.block-7, div.block-8, div.block-9, div.block-10 {
     rgba(187, 187, 187, 0.25));
 }
 
+div.block-x {
+  outline-color: var(--col-x-bdr);
+  background-color: transparent;
+  outline-style: dashed;
+}
 div.block-0 {outline-color: var(--col-0); background-color: var(--col-0); color: var(--col-0);}
 div.block-1 {outline-color: var(--col-1); background-color: var(--col-1); color: var(--col-1);}
 div.block-2 {outline-color: var(--col-2); background-color: var(--col-2); color: var(--col-2);}

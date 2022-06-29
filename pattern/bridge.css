@@ -1,5 +1,5 @@
 :root {
-  --block-size: 7vw;
+  --block-size: 6vw;
   --col-1: #e4131e;
 }
 
@@ -13,11 +13,17 @@
   visibility: visible;
 }
 
+div#bridge {
+  height: var(--block-size);
+  width: 100vw;
+}
 
-div.block, div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
+div.block, div.block-x,
+div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
 div.block-5, div.block-6, div.block-7, div.block-8, div.block-9, div.block-10 {
   height: var(--block-size);
   line-height: var(--block-size);
   font-size: 5vw;
   color: #555;
+  margin: 0.1vw;
 }
