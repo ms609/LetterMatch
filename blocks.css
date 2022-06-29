@@ -48,14 +48,8 @@ div.block {
   float: left;
   outline: 2px solid;
   outline-offset: -2px;
-  visibility: hidden;
   background-image: linear-gradient(
     210deg,
     rgba(187, 187, 187, 0.6),
     rgba(187, 187, 187, 0.25));
 }
-
-div.text {
-  
-}
-

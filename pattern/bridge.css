@@ -1,0 +1,9 @@
+#input-prompt {
+  clear: both;
+  margin-top: 10%;
+  border: red dotted 10px;
+}
+
+.block {
+  visibility: visible;
+}
