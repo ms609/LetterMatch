@@ -1,9 +1,23 @@
+:root {
+  --block-size: 7vw;
+  --col-1: #e4131e;
+}
+
 #input-prompt {
   clear: both;
   margin-top: 10%;
-  border: red dotted 10px;
+  width: calc(3 * var(--block-size) + 1vw);
 }
 
 .block {
   visibility: visible;
+}
+
+
+div.block, div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
+div.block-5, div.block-6, div.block-7, div.block-8, div.block-9, div.block-10 {
+  height: var(--block-size);
+  line-height: var(--block-size);
+  font-size: 5vw;
+  color: #555;
 }

@@ -38,12 +38,11 @@ div.block-container {
   aspect-ratio: 3/5;
 }
 
-div.block {
+div.block, div.block-0, div.block-1, div.block-2, div.block-3, div.block-4,
+div.block-5, div.block-6, div.block-7, div.block-8, div.block-9, div.block-10 {
   margin: 0.5%;
   box-sizing: border-box;
-  width: 31%;
   aspect-ratio: 1;
-  height: 19%;
   display: block;
   float: left;
   outline: 2px solid;
@@ -53,3 +52,15 @@ div.block {
     rgba(187, 187, 187, 0.6),
     rgba(187, 187, 187, 0.25));
 }
+
+div.block-0 {outline-color: var(--col-0); background-color: var(--col-0); color: var(--col-0);}
+div.block-1 {outline-color: var(--col-1); background-color: var(--col-1); color: var(--col-1);}
+div.block-2 {outline-color: var(--col-2); background-color: var(--col-2); color: var(--col-2);}
+div.block-3 {outline-color: var(--col-3); background-color: var(--col-3); color: var(--col-3);}
+div.block-4 {outline-color: var(--col-4); background-color: var(--col-4); color: var(--col-4);}
+div.block-5 {outline-color: var(--col-5); background-color: var(--col-5); color: var(--col-5);}
+div.block-6 {outline-color: var(--col-6); background-color: var(--col-6); color: var(--col-6-spot);}
+div.block-7 {outline-color: var(--col-7); background-color: var(--col-7); color: var(--col-7);}
+div.block-8 {outline-color: var(--col-8); background-color: var(--col-8); color: var(--col-8);}
+div.block-9 {outline-color: var(--col-9); background-color: var(--col-9); color: var(--col-9);}
+div.block-10 {outline-color: var(--col-10-bdr); background-color: var(--col-10); color: var(--col-10)}
