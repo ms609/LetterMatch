@@ -6,7 +6,7 @@ var minus_sums = [
   // Two
   [i2, "-", i2, i0],
   [i2, "-", i1, i1],
-  [i2, "-", hidden1, i1],
+  [hidden2, "-", hidden1, i1],
   
   // Three
   [i3, "-", i3, i0],
