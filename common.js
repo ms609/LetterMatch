@@ -9,8 +9,8 @@ NewLetter = function (avoid) {
 
 ShowTarget = function () {
   if (target != '') {
-    // $('#target').html(target + target.toLowerCase());
-    $('#target').html(target.toLowerCase());
+    $('#target').html(target + target.toLowerCase());
+    // $('#target').html(target.toLowerCase());
   }
   //$('body').removeClass("pressed");
 }
