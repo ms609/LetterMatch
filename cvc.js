@@ -32,7 +32,7 @@ var dictionary = {
 var words = Object.keys(dictionary)
 var position = 0;
 var beeping;
-
+var uppercase = window.location.hash === '#uc';
 
 RandomWord = function (not) {
   var ret;
@@ -52,9 +52,10 @@ NewWord = function (avoid) {
 
 ShowTargetWord = function () {
   if (target != '') {
-    $('#letter1').html(target.substring(0, 1));
-    $('#letter2').html(target.substring(1, 2));
-    $('#letter3').html(target.substring(2, 3));
+    var display = uppercase ? target.toUpperCase() : target;
+    $('#letter1').html(display.substring(0, 1));
+    $('#letter2').html(display.substring(1, 2));
+    $('#letter3').html(display.substring(2, 3));
     $('#image').html(dictionary[target]);
   }
 }
